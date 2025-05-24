@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="VPS Docker Deployment Using Nginx" />
 <meta name="twitter:site" content="@aaryanpoud3l" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-22T23:33:00+01:00","datePublished":"2025-05-22T23:33:00+01:00","description":"Nginx Docker Setup on a VPS","headline":"VPS Docker Deployment Using Nginx","mainEntityOfPage":{"@type":"WebPage","@id":"https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/"},"url":"https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-23T15:46:19+01:00","datePublished":"2025-05-22T23:33:00+01:00","description":"Nginx Docker Setup on a VPS","headline":"VPS Docker Deployment Using Nginx","mainEntityOfPage":{"@type":"WebPage","@id":"https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/"},"url":"https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -364,7 +364,7 @@
 
       
         <a
-          href="https://github.com/aaryanpoudel"
+          href="https://github.com/aaryanpoud3l"
           aria-label="github"
           
 
@@ -387,7 +387,7 @@
 
       
         <a
-          href="https://www.linkedin.com/in/aaryanpoudel"
+          href="https://www.linkedin.com/in/aaryanpoud3l"
           aria-label="linkedin"
           
 
@@ -410,7 +410,7 @@
 
       
         <a
-          href="https://www.instagram.com/aaryanpoudel"
+          href="https://www.instagram.com/aaryanpoud3l"
           aria-label="instagram"
           
 
@@ -616,6 +616,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1748011579"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  May 23, 2025
+</time>
+
+        </span>
+      
 
       
 
@@ -667,8 +690,8 @@
   <div class="content">
     <h1 id="nginx-docker-setup-on-a-vps">Nginx Docker Setup on a VPS</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-sh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -710,46 +733,46 @@
 39
 40
 41
-</pre></td><td class="rouge-code"><pre>mkdir ~/dockerDemo/html &amp;&amp; cd ~/dockerDemo;
-echo 'hello world from docker using nginx' &gt; html/index.html
-touch Dockerfile docker-compose.yml nginx.conf
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir</span> ~/dockerDemo/html <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/dockerDemo<span class="p">;</span>
+<span class="nb">echo</span> <span class="s1">'hello world from docker using nginx'</span> <span class="o">&gt;</span> html/index.html
+<span class="nb">touch </span>Dockerfile docker-compose.yml nginx.conf
 
-#nginx.conf
-events {}
-http {
-    server {
-        listen 80;
+<span class="c">#nginx.conf</span>
+events <span class="o">{}</span>
+http <span class="o">{</span>
+    server <span class="o">{</span>
+        listen 80<span class="p">;</span>
         server_name sub.domain.com www.sub.domain.com&gt;
 
-        root /usr/share/nginx/html;
-        index index.html;
-        location / {
-            try_files $uri $uri/ =404;
-        }
-    }
-}
+        root /usr/share/nginx/html<span class="p">;</span>
+        index index.html<span class="p">;</span>
+        location / <span class="o">{</span>
+            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ <span class="o">=</span>404<span class="p">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 
-#Dockerfile
+<span class="c">#Dockerfile</span>
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY html/ /usr/share/nginx/html/
 
-#docker-compose.yml
+<span class="c">#docker-compose.yml</span>
 services:
   nginx:
-    build: .
+    build: <span class="nb">.</span>
     ports:
-      - "80:80"
+      - <span class="s2">"80:80"</span>
     restart: always
 
-#Build image and serve
+<span class="c">#Build image and serve</span>
 docker compose build
-docker compose up -d
+docker compose up <span class="nt">-d</span>
 
-#Verify the docker is serving the html site
-#Checking Locally
+<span class="c">#Verify the docker is serving the html site</span>
+<span class="c">#Checking Locally</span>
 curl localhost:80 
-# After pointing to the subdomain via cloudflare
+<span class="c"># After pointing to the subdomain via cloudflare</span>
 curl http://sub.domain.com 
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -871,7 +894,21 @@ curl http://sub.domain.com
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/cheatSheet-linux/">Cheatsheet for Linux</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/blog-vpsDockerNginxSetup/">VPS Docker Deployment Using Nginx</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/cheatSheet-docker/">Cheatsheet for Docker</a>
         </li>
       
         
@@ -886,20 +923,6 @@ curl http://sub.domain.com
         
         <li class="text-truncate lh-lg">
           <a href="/posts/blog-usefulApplications/">Useful Applications</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/init-neovimSetup/">Neovim Init Setup</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/cheatSheet-git/">Git & GitHub SSH Setup</a>
         </li>
       
     </ul>
@@ -928,6 +951,15 @@ curl http://sub.domain.com
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
@@ -1008,39 +1040,6 @@ curl http://sub.domain.com
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
   
     
     
@@ -1092,6 +1091,31 @@ curl http://sub.domain.com
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1111,29 +1135,24 @@ curl http://sub.domain.com
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1269,25 +1288,25 @@ curl http://sub.domain.com
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/init/">init</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/setup/">setup</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet/">cheatsheet</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/tldr/">tldr</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/cli/">cli</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet/">cheatsheet</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/tldr/">tldr</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet-setup-linux/">cheatsheet,setup,linux</a>
@@ -1608,9 +1627,13 @@ hugo ...
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/cheatSheet-docker/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>Cheatsheet for Docker</p>
+    </a>
   
 </nav>
 
@@ -1680,6 +1703,15 @@ hugo ...
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
@@ -1760,39 +1792,6 @@ hugo ...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
   
     
     
@@ -1844,6 +1843,31 @@ hugo ...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1863,29 +1887,24 @@ hugo ...
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2021,25 +2040,25 @@ hugo ...
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/init/">init</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/setup/">setup</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/blog/">blog</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet/">cheatsheet</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/tldr/">tldr</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/cli/">cli</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet/">cheatsheet</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">linux</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/tldr/">tldr</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/cheatsheet-setup-linux/">cheatsheet,setup,linux</a>

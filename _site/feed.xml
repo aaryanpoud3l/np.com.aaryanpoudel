@@ -4,7 +4,7 @@
   <id>https://aaryanpoudel.com.np/</id>
   <title>Aaryan Poudel</title>
   <subtitle>A minimal docs portfolio developed to keep track of all the code snippets and tutorials for knowledge sharing</subtitle>
-  <updated>2025-05-22T23:45:35+01:00</updated>
+  <updated>2025-05-24T18:31:26+01:00</updated>
   <author>
     <name>Aaryan Poudel</name>
     <uri>https://aaryanpoudel.com.np/</uri>
@@ -20,11 +20,124 @@
 
   
   <entry>
+    <title>Cheatsheet for Linux</title>
+    <link href="https://aaryanpoudel.com.np/posts/cheatSheet-linux/" rel="alternate" type="text/html" title="Cheatsheet for Linux" />
+    <published>2025-05-24T17:28:00+01:00</published>
+  
+    <updated>2025-05-24T17:28:00+01:00</updated>
+  
+    <id>https://aaryanpoudel.com.np/posts/cheatSheet-linux/</id>
+    <content src="https://aaryanpoudel.com.np/posts/cheatSheet-linux/" />
+    <author>
+      <name>Aaryan Poudel</name>
+    </author>
+
+  
+    
+    <category term="CheatSheets" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Ownership
+sudo chown $USER:$USER fileName
+
+sudo chown $USER:$USER folderName
+sudo chown -R $USER:$USER folderName //Modifies the files inside
+
+
+File Permission
+There are three permissions:
+Read: 4 Write 2 Execute 1 or rwx
+chmod 777 fileName
+chmod +rwx fileName
+chmod -rwx fileName
+
+chmod 755 folderName
+chmod -R 755 folderName  // Modifies the files inside
+
+
+Defaults:
+
+  General Folder: 775
+  Gen...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Cheatsheet for Docker</title>
+    <link href="https://aaryanpoudel.com.np/posts/cheatSheet-docker/" rel="alternate" type="text/html" title="Cheatsheet for Docker" />
+    <published>2025-05-23T15:42:00+01:00</published>
+  
+    <updated>2025-05-23T15:42:00+01:00</updated>
+  
+    <id>https://aaryanpoudel.com.np/posts/cheatSheet-docker/</id>
+    <content src="https://aaryanpoudel.com.np/posts/cheatSheet-docker/" />
+    <author>
+      <name>Aaryan Poudel</name>
+    </author>
+
+  
+    
+    <category term="CheatSheets" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Image
+docker run imageName
+docker build -t yourImageName .
+docker images
+docker rmi imageName
+docker image prune
+
+
+Container
+docker ps
+docker ps -a
+docker container stats
+
+docker start containerName
+docker stop containerName
+
+docker rename oldName newName
+docker rm containerName
+docker rm -f containerName #If running
+docker container prune
+
+docker exec -it containerName sh #Run Shell
+
+
+Docker C...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>VPS Docker Deployment Using Nginx</title>
     <link href="https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/" rel="alternate" type="text/html" title="VPS Docker Deployment Using Nginx" />
     <published>2025-05-22T23:33:00+01:00</published>
   
-    <updated>2025-05-22T23:33:00+01:00</updated>
+    <updated>2025-05-23T15:46:19+01:00</updated>
   
     <id>https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/</id>
     <content src="https://aaryanpoudel.com.np/posts/blog-vpsDockerNginxSetup/" />
@@ -74,7 +187,7 @@ http {
     <link href="https://aaryanpoudel.com.np/posts/init-vpsSetup/" rel="alternate" type="text/html" title="VPS Init Setup" />
     <published>2025-05-22T16:30:00+01:00</published>
   
-    <updated>2025-05-22T18:56:53+01:00</updated>
+    <updated>2025-05-22T23:46:17+01:00</updated>
   
     <id>https://aaryanpoudel.com.np/posts/init-vpsSetup/</id>
     <content src="https://aaryanpoudel.com.np/posts/init-vpsSetup/" />
@@ -169,94 +282,6 @@ Utility:
   
   
     Bitwarden: Open source password manager. Can be used as a browser ex...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Git &amp; GitHub SSH Setup</title>
-    <link href="https://aaryanpoudel.com.np/posts/cheatSheet-git/" rel="alternate" type="text/html" title="Git &amp;amp; GitHub SSH Setup" />
-    <published>2025-01-09T12:22:24+00:00</published>
-  
-    <updated>2025-01-13T15:53:55+00:00</updated>
-  
-    <id>https://aaryanpoudel.com.np/posts/cheatSheet-git/</id>
-    <content src="https://aaryanpoudel.com.np/posts/cheatSheet-git/" />
-    <author>
-      <name>Aaryan Poudel</name>
-    </author>
-
-  
-    
-    <category term="CheatSheets" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Git
-Git is an opensource version control system used to track changes in files. It’s a powerful tool allowing multiple developers to work efficiently on a single code-base.
-
-Cheatsheet
-git init
-git add .
-git pull
-git push
-git clone https://git@repositoryUrl
-git commit -m "my first commit"
-
-git branch branchName
-git checkout branchName
-
-GitHub SSH Setup
-It’s a dev platform utilizing git for dist...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Symbolic Link / Symlink</title>
-    <link href="https://aaryanpoudel.com.np/posts/tldr-symlink/" rel="alternate" type="text/html" title="Symbolic Link / Symlink" />
-    <published>2025-01-09T12:07:24+00:00</published>
-  
-    <updated>2025-01-11T14:13:48+00:00</updated>
-  
-    <id>https://aaryanpoudel.com.np/posts/tldr-symlink/</id>
-    <content src="https://aaryanpoudel.com.np/posts/tldr-symlink/" />
-    <author>
-      <name>Aaryan Poudel</name>
-    </author>
-
-  
-    
-    <category term="TLDR" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Symlink:
-
-Symlink is a type of file that’s used to point to another file/directory. It contains a text string that’s automatically interpreted and followed by the OS as a path to another file/directory.
-
-  The source file/dir is called a target.
-  Example use case: if you want your game’s save file to be stored in /hardDisk/saveFile then create a symlink from /saveFolder/saveFile to the new loc...
     </summary>
   
 

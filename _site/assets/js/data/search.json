@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "Cheatsheet for Linux",
+    "url": "/posts/cheatSheet-linux/",
+    "categories": "CheatSheets",
+    "tags": "blog, cheatsheet, tldr",
+    "date": "2025-05-24 17:28:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Ownershipsudo chown $USER:$USER fileNamesudo chown $USER:$USER folderNamesudo chown -R $USER:$USER folderName //Modifies the files insideFile PermissionThere are three permissions:Read: 4 Write 2 E...",
+    "content": "Ownershipsudo chown $USER:$USER fileNamesudo chown $USER:$USER folderNamesudo chown -R $USER:$USER folderName //Modifies the files insideFile PermissionThere are three permissions:Read: 4 Write 2 Execute 1 or rwxchmod 777 fileNamechmod +rwx fileNamechmod -rwx fileNamechmod 755 folderNamechmod -R 755 folderName  // Modifies the files insideDefaults:  General Folder: 775  General File: 664  Deployment Folder: 755  Deployment File: 644"
+  },
+  
+  {
+    "title": "Cheatsheet for Docker",
+    "url": "/posts/cheatSheet-docker/",
+    "categories": "CheatSheets",
+    "tags": "blog, cheatsheet, tldr",
+    "date": "2025-05-23 15:42:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Imagedocker run imageNamedocker build -t yourImageName .docker imagesdocker rmi imageNamedocker image pruneContainerdocker psdocker ps -adocker container statsdocker start containerNamedocker stop ...",
+    "content": "Imagedocker run imageNamedocker build -t yourImageName .docker imagesdocker rmi imageNamedocker image pruneContainerdocker psdocker ps -adocker container statsdocker start containerNamedocker stop containerNamedocker rename oldName newNamedocker rm containerNamedocker rm -f containerName #If runningdocker container prunedocker exec -it containerName sh #Run ShellDocker Composedocker run -d -name yourContName imageNamedocker compose builddocker compose up -ddocker compose up -d --build"
+  },
+  
+  {
     "title": "VPS Docker Deployment Using Nginx",
     "url": "/posts/blog-vpsDockerNginxSetup/",
     "categories": "Setups",
